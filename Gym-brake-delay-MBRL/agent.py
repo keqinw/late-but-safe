@@ -1,5 +1,5 @@
 import numpy as np
-
+import copy
 
 class Agent:
     def __init__(self, env):
@@ -47,11 +47,13 @@ class Agent:
         """
         rewards = []
         states, actions, reward_sum, done = [self.env.reset()], [], 0, False
+        real_states = copy.copy(self.env.ob_buffer)
         policy.reset()
         for t in range(horizon):
             actions.append(policy.act(states[t], t))
             state, reward, done, real_state = self.env.step(actions[t])
-            states.append(real_state)
+            states.append(state)
+            real_states.append(tuple(real_state[0:2]))
             reward_sum += reward
             rewards.append(reward)
             print('current position:',real_state[0:2])
@@ -61,9 +63,9 @@ class Agent:
                 break
            
         # print("Rollout length: %d,\tTotal reward: %d,\t Last reward: %d" % (len(actions), reward_sum), reward)
-
         return {
             "obs": np.array(states),
+            "real_obs": np.concatenate([np.array(real_states), self.env.goal * np.ones((len(real_states),1))],axis = 1),
             "ac": np.array(actions),
             "reward_sum": reward_sum,
             "rewards": np.array(rewards),
@@ -84,7 +86,6 @@ class RandomPolicy:
 
 
 if __name__ == "__main__":
-    import envs
     import gym
 
     env = gym.make("Pushing2D-v1")

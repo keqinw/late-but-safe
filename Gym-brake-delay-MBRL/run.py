@@ -92,7 +92,7 @@ class ExperimentModelDynamics:
                     self.task_horizon, self.cem_policy if optimizer == "cem" else self.random_policy
                 )
             )
-            traj = samples[-1]["obs"]
+            traj = samples[-1]["real_obs"]
             if j == 0 or (j + 1) % INFO == 0: log.info("If success: {}".format(samples[-1]['rewards'][-1]==50))
             
             # # plot the result
@@ -100,7 +100,7 @@ class ExperimentModelDynamics:
             # x = [i for i in range(traj.shape[0])]
             # plt.plot(x,traj[:,0],"*")
             # plt.fill_between(x, traj[:,-1]-0.3, traj[:,-1]+0.3, color='b', alpha=.1)
-            # plt.show()
+            # plt.savefig('./out/traj{}'.format(j))
 
         avg_return = np.mean([sample["reward_sum"] for sample in samples])
         avg_success = np.mean([sample["rewards"][-1] == 50 for sample in samples])
@@ -184,40 +184,6 @@ class ExperimentModelDynamics:
 
         return cme_test, rnd_test, loss
 
-
-def test_cem_gt_dynamics(num_episode=50):
-    log.info("### Q2.1.1: CEM (without MPC)")
-    mpc_params = {'use_mpc': False, 'num_particles': 1}
-    exp = ExperimentGTDynamics(env_name="SimpleDriving-v0", mpc_params=mpc_params)
-    avg_reward, avg_success = exp.test(num_episode, optimizer="cem")
-    log.info("CEM PushingEnv: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
-
-    # log.info("### Q2.1.2: Random Policy (without MPC)")
-    # mpc_params = {"use_mpc": False, "num_particles": 1}
-    # exp = ExperimentGTDynamics(env_name="SimpleDriving-v0", mpc_params=mpc_params)
-    # avg_reward, avg_success = exp.test(num_episode, optimizer="random")
-    # log.info("Random PushingEnv: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
-
-    # log.info("### Q2.1.2: Random Policy + MPC")
-    # mpc_params = {"use_mpc": True, "num_particles": 1}
-    # exp = ExperimentGTDynamics(env_name="SimpleDriving-v0", mpc_params=mpc_params)
-    # avg_reward, avg_success = exp.test(num_episode, optimizer="random")
-    # log.info("Random + MPC PushingEnv: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
-
-    # log.info("### Q2.1.3:")
-    # # CEM (without MPC)
-    # mpc_params = {"use_mpc": False, "num_particles": 1}
-    # exp = ExperimentGTDynamics(env_name=env_name, mpc_params=mpc_params)
-    # avg_reward, avg_success = exp.test(num_episode, optimizer="cem")
-    # log.info("CEM {}: avg_reward: {}, avg_success: {}".format(env_name[:-3], avg_reward, avg_success))
-
-    # CEM + MPC
-    # mpc_params = {"use_mpc": True, "num_particles": 1}
-    # exp = ExperimentGTDynamics(env_name="SimpleDriving-v0", mpc_params=mpc_params)
-    # avg_reward, avg_success = exp.test(num_episode, optimizer="cem")
-    # log.info("CEM + MPC SimpleDriving-v0: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
-
-
 def plot_loss(losses, title, fpath):
     plt.figure(dpi=100)
     plt.plot(range(len(losses)),losses)
@@ -236,52 +202,16 @@ def train_single_dynamics(num_test_episode=50, device=None):
     mpc_params = {"use_mpc": True, "num_particles": 3}
     exp = ExperimentModelDynamics(env_name="SimpleDriving-v0", num_nets=num_nets, mpc_params=mpc_params, device=device)
 
-    log.info("### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations")
+    log.info("### Q2.2.1: Train from 1000 randomly sampled episodes with w00 iterations")
     losses = exp.model_warmup(num_episodes=num_episodes, num_train_itrs=num_train_itrs)
-    plot_loss(losses, '2.2.1: Single Network Training', 'out/2.2.1-loss.png')
-
-    # log.info("### Q2.2.2: Test with Random Policy for %d episodes" % num_test_episode)
-    # avg_reward, avg_success = exp.test(num_test_episode, optimizer="random")
-    # log.info("Single + Random: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
+    plot_loss(losses, '2.2.1: Single Network Training', 'out/loss.png')
 
     log.info("### Q2.2.3: Test with CEM for %d episodes" % num_test_episode)
     avg_reward, avg_success = exp.test(num_test_episode, optimizer="cem")
     log.info("Single + CEM: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
 
 
-def train_pets(device=None):
-    # MBRL with PETS
-    log.info("### Q2.3.1: Train an ensemble of probabilistic dynamics model (PETS)")
-    num_nets = 2
-    num_train_itrs = 500
-    evaluation_interval = 50
-    num_episodes_per_itr = 1
-
-    mpc_params = {"use_mpc": True, "num_particles": 6}
-    exp = ExperimentModelDynamics(env_name="SimpleDriving-v0", num_nets=num_nets, mpc_params=mpc_params, device=device)
-
-    log.info("### Q2.3.1: Train from 100 randomly sampled episodes + 500 MPC iterations")
-    exp.model_warmup(num_episodes=1000, num_train_itrs=10)
-    cme_test, rnd_test, loss = exp.train(
-        num_train_itrs=num_train_itrs,
-        num_episodes_per_itr=num_episodes_per_itr,
-        evaluation_interval=evaluation_interval)
-    plot_loss(loss, '2.3.1: PETS model loss', 'out/2.3.1-loss.png')
-
-    log.info("### Q2.3.2: Plot CEM + MPC v.s. Random Policy + MPC over training")
-    for i, name in enumerate(["Returns", "Success Rate"]):
-        plt.figure(dpi=100)
-        plt.plot(np.arange(len(cme_test)) * 50, np.array(cme_test)[:, i], label="CEM + MPC")
-        # plt.plot(np.arange(len(cme_test)) * 50, np.array(rnd_test)[:, i], label="Random + MPC")
-        plt.xlabel("Training Iterations")
-        plt.ylabel(name)
-        plt.legend()
-        plt.savefig("out/%d-cem-vs-random-%s.png" % (num_nets, name), bbox_inches="tight")
-
-
 if __name__ == "__main__":
     gpu_number = 0
     device = torch.device('cuda:%d' % gpu_number if torch.cuda.is_available() else 'cpu')
-    # test_cem_gt_dynamics(10)    # Q2.1
-    train_single_dynamics(50, device=device)   # Q2.2
-    # train_pets(device=device)  # Q2.3
+    train_single_dynamics(8, device=device)   # Q2.2

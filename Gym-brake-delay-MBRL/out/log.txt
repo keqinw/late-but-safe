@@ -68,4 +68,4 @@
 2022-04-10 02:50:00 run.py     INFO    : If success: False
 2022-04-10 02:50:24 run.py     INFO    : Test episode 49
 2022-04-10 02:50:46 run.py     INFO    : If success: False
-2022-04-10 02:50:46 run.py     INFO    : Single + CEM: avg_reward: 1.0676652371743416, avg_success: 0.22
+2022-04-10 02:50:46 run.py     INFO    : Single + CEM: avg_reward: 1.0676652371743416, avg_success: 0.24
