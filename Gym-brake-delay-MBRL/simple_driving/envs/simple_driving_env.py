@@ -38,7 +38,7 @@ class SimpleDrivingEnv(gym.Env):
         self.prev_dist_to_goal = None
         self.rendered_img = None
         self.render_rot_matrix = None
-        self.n_step_delay = 10
+        self.n_step_delay = 5
         self.reset()
 
     def burn_in(self):

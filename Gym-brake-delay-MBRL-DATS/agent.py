@@ -1,4 +1,5 @@
 import numpy as np
+import copy
 
 class Agent:
     def __init__(self, env):
@@ -24,7 +25,7 @@ class Agent:
         for t in range(horizon):
             actions.append(policy.act(states[t],[], t))
             # here we record the previous action, which is needed in dynamics model training
-            previous_actions.append(self.env.previous_action)
+            previous_actions.append(copy.copy(self.env.previous_action))
             # apply action
             state, reward, done, info = self.env.step(actions[t])
             states.append(state)
@@ -63,7 +64,8 @@ class Agent:
         for t in range(horizon):
             actions.append(policy.act(states[t], previous_actions, t))
             state, reward, done, real_state = self.env.step(actions[t])
-            states.append(real_state)
+            print(real_state)
+            states.append(state)
             reward_sum += reward
             rewards.append(reward)
             print('current position:',real_state[0:2])
@@ -96,7 +98,6 @@ class RandomPolicy:
 
 
 if __name__ == "__main__":
-    import envs
     import gym
 
     env = gym.make("Pushing2D-v1")

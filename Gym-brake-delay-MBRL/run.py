@@ -214,4 +214,4 @@ def train_single_dynamics(num_test_episode=50, device=None):
 if __name__ == "__main__":
     gpu_number = 0
     device = torch.device('cuda:%d' % gpu_number if torch.cuda.is_available() else 'cpu')
-    train_single_dynamics(8, device=device)   # Q2.2
+    train_single_dynamics(10, device=device)   # Q2.2

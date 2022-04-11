@@ -71,7 +71,7 @@ def main():
 
     # train the model
     callback = SaveOnBestTrainingRewardCallback(check_freq=1000, log_dir=log_dir)
-    timesteps = 60000
+    timesteps = 50000
     model.learn(total_timesteps=timesteps,callback=callback)
 
     plot_results([log_dir], timesteps, results_plotter.X_TIMESTEPS, "PPO")

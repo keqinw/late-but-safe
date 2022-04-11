@@ -8,7 +8,7 @@ import math
 
 log = logging.getLogger('root')
 
-DELAY_STEPS = 10
+DELAY_STEPS = 5
 
 class MPC:
     def __init__(self, env, plan_horizon, model, popsize, num_elites, max_iters,
