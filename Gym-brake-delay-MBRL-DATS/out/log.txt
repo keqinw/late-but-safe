@@ -1,0 +1,41 @@
+2022-04-11 01:05:25 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-11 01:05:25 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-11 01:05:25 run.py     INFO    : Warm up episode 0
+2022-04-11 01:05:26 run.py     INFO    : Warm up episode 99
+2022-04-11 01:05:27 run.py     INFO    : Warm up episode 199
+2022-04-11 01:05:28 run.py     INFO    : Warm up episode 299
+2022-04-11 01:05:29 run.py     INFO    : Warm up episode 399
+2022-04-11 01:05:30 run.py     INFO    : Warm up episode 499
+2022-04-11 01:05:31 run.py     INFO    : Warm up episode 599
+2022-04-11 01:05:32 run.py     INFO    : Warm up episode 699
+2022-04-11 01:05:34 run.py     INFO    : Warm up episode 799
+2022-04-11 01:05:35 run.py     INFO    : Warm up episode 899
+2022-04-11 01:05:36 run.py     INFO    : Warm up episode 999
+2022-04-11 01:05:36 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-11 01:05:36 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-11 01:05:36 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-11 01:05:36 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-11 01:05:37 run.py     INFO    : ### Q2.2.3: Test with CEM for 20 episodes
+2022-04-11 01:05:37 run.py     INFO    : Test episode 0
+2022-04-11 01:06:17 run.py     INFO    : If success: True
+2022-04-11 01:06:17 run.py     INFO    : Test episode 1
+2022-04-11 01:06:35 run.py     INFO    : If success: False
+2022-04-11 01:07:23 run.py     INFO    : Test episode 3
+2022-04-11 01:07:58 run.py     INFO    : If success: True
+2022-04-11 01:08:26 run.py     INFO    : Test episode 5
+2022-04-11 01:08:54 run.py     INFO    : If success: True
+2022-04-11 01:09:20 run.py     INFO    : Test episode 7
+2022-04-11 01:09:53 run.py     INFO    : If success: True
+2022-04-11 01:10:19 run.py     INFO    : Test episode 9
+2022-04-11 01:11:05 run.py     INFO    : If success: False
+2022-04-11 01:11:23 run.py     INFO    : Test episode 11
+2022-04-11 01:11:52 run.py     INFO    : If success: True
+2022-04-11 01:12:22 run.py     INFO    : Test episode 13
+2022-04-11 01:12:39 run.py     INFO    : If success: False
+2022-04-11 01:13:03 run.py     INFO    : Test episode 15
+2022-04-11 01:13:24 run.py     INFO    : If success: False
+2022-04-11 01:14:05 run.py     INFO    : Test episode 17
+2022-04-11 01:14:22 run.py     INFO    : If success: False
+2022-04-11 01:14:41 run.py     INFO    : Test episode 19
+2022-04-11 01:15:18 run.py     INFO    : If success: True
+2022-04-11 01:15:18 run.py     INFO    : Single + CEM: avg_reward: 21.098336814878024, avg_success: 0.6
