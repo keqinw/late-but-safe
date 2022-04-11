@@ -11,5 +11,5 @@ How to use this package?
 Note: Now their is already a good model, whoose success rate is around 0.22.
 Please be care before you run the main.py, in case you over-write the best model.
 
-![alt text](https://github.com/keqinw/late-but-safe/blob/master/Gym-brake-delay/brake_delay.gif?raw=true)
+![alt text](https://github.com/keqinw/late-but-safe/blob/master/Gym-brake-delay/brake_delay.gif?)
 
