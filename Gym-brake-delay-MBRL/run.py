@@ -21,13 +21,13 @@ log.addHandler(config.MyHandler())
 INFO = 2
 
 # Training params
-TASK_HORIZON = 100 # 总共几步内完成，如果没完成，就认为失败
-PLAN_HORIZON = 10 # 规划几步，这里初始值是5，太高也不好
+TASK_HORIZON = 100
+PLAN_HORIZON = 10
 
 # CEM params
 POPSIZE = 100
 NUM_ELITES = 20
-MAX_ITERS = 50#50
+MAX_ITERS = 50
 
 # Model params
 LR = 1e-3
@@ -66,16 +66,6 @@ class ExperimentGTDynamics(object):
             print(samples[-1]["rewards"][-1]== 50)
         avg_return = np.mean([sample["reward_sum"] for sample in samples])
         avg_success = np.mean([sample["rewards"][-1] == 50 for sample in samples])
-        # 这里的判断成功也是不对的，需要修改
-
-        # 成功率比较低，我觉得原因可能是以下几点：
-        # - cost function 需要修改（逻辑上是对的，把做完action的下一个state的cost作为这个action的cost）
-        # - timestep是不是太高了，导致做决策的次数太多，导致失败。
-        # - 是不是环境太复杂了，我先简化一下任务，确认这个timestep和这个cost function是可以的
-        # - 简化任务的方式有：把油门恒定；扩大tol；。。。
-        # - 以我的直觉看，我觉得CEM是足够解决这个问题的，一定是哪里错了
-        
-        # - 结果更新，我自己写了一个CEM + no MPC，发现成功率可以达到0.3以上，所以这个绝对没有问题的
         return avg_return, avg_success
 
 
