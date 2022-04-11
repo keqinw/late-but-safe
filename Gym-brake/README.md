@@ -10,3 +10,7 @@ How to use this package?
 
 Note: Now their is already a good model, whoose success rate is around 1.0
 Please be care before you run the main.py, in case you over-write the best model.
+
+Here is the result:
+
+![alt text](https://github.com/keqinw/late-but-safe/blob/master/Gym-brake/brake.gif?raw=true)
