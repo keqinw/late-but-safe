@@ -25,7 +25,7 @@ TASK_HORIZON = 100
 PLAN_HORIZON = 10
 
 # CEM params
-POPSIZE = 100
+POPSIZE = 200
 NUM_ELITES = 20
 MAX_ITERS = 50
 
@@ -204,7 +204,7 @@ def train_single_dynamics(num_test_episode=50, device=None):
     num_nets = 2
     num_episodes = 1000
     num_train_itrs = 300
-    mpc_params = {"use_mpc": True, "num_particles": 6}
+    mpc_params = {"use_mpc": True, "num_particles": 3}
     exp = ExperimentModelDynamics(env_name="SimpleDriving-v0", num_nets=num_nets, mpc_params=mpc_params, device=device)
 
     log.info("### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations")
