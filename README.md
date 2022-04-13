@@ -10,6 +10,6 @@ Gym-brake-delay: 5-steps action delay with PPO (50,000 timesteps). Success rate:
 
 Gym-brake-MBRL: no action delay with PETS. Success rate: 1.0
 
-Gym-brake-delay-MBRL: 10-steps action delay with PETS. Success rate: 0.24
+Gym-brake-delay-MBRL: 5-steps action delay with PETS. Success rate: 0.24
 
-Gym-brake-delay-MBRL-DATS: 10-steps action delay with DATS. Success rate: 0.74
+Gym-brake-delay-MBRL-DATS: 5-steps action delay with DATS. Success rate: 0.74
