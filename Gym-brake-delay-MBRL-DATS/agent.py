@@ -59,6 +59,7 @@ class Agent:
         
         states, actions, reward_sum, done = [self.env.reset()], [], 0, False
         previous_actions = self.env.previous_action
+        init_actions = copy.copy(self.env.previous_action)
 
         policy.reset()
         for t in range(horizon):
@@ -81,6 +82,7 @@ class Agent:
             "ac": np.array(actions),
             "reward_sum": reward_sum,
             "rewards": np.array(rewards),
+            "init_actions": np.array(init_actions)
         }
              
 

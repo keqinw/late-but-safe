@@ -25,8 +25,8 @@ class SimpleDrivingEnv(gym.Env):
             high=np.array([10, 10, 10], dtype=np.float32))
         self.np_random, _ = gym.utils.seeding.np_random()
 
-        self.client = p.connect(p.DIRECT)
-        # self.client = p.connect(p.GUI)
+        # self.client = p.connect(p.DIRECT)
+        self.client = p.connect(p.GUI)
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
 
         # Reduce length of episodes for RL algorithms
@@ -48,7 +48,8 @@ class SimpleDrivingEnv(gym.Env):
 
         # apply n step actions randomly
         for i in range(self.n_step_delay):
-            action = self.np_random.uniform(-1, 0)
+            # action = self.np_random.uniform(-1, 0)
+            action = 0
             self.previous_action.append(action)
             self.car.apply_action(action)
             p.stepSimulation()
@@ -129,6 +130,35 @@ class SimpleDrivingEnv(gym.Env):
         car_ob = self.ob_buffer[-self.n_step_delay-1]
 
         return np.array(car_ob + (self.goal,), dtype=np.float32)
+        
+    def step_visual(self,action):
+        self.car.apply_action(action)
+        p.stepSimulation()
+
+    def reset_visual(self):
+        p.resetSimulation(self.client)
+        p.setGravity(0, 0, -10)
+        # Reload the plane
+        # Plane(self.client)
+        planeId = p.loadURDF("plane.urdf")
+        
+        # Set the goal to a random target
+        # x = (self.np_random.uniform(5, 9) if self.np_random.randint(2) else
+        #      self.np_random.uniform(-5, -9))
+        # y = (self.np_random.uniform(5, 9) if self.np_random.randint(2) else
+        #      self.np_random.uniform(-5, -9))
+        x = self.np_random.uniform(3, 7)
+        y = 0
+
+        self.goal = x
+        self.done = False
+        self.previous_action = []
+
+        # Reload the car
+        self.car = Car(self.client)
+
+        # Visual element of the goal
+        Goal(self.client, (self.goal,y))
     
     def reset_test(self):
         p.resetSimulation(self.client)
@@ -153,9 +183,9 @@ class SimpleDrivingEnv(gym.Env):
         self.car = Car(self.client)
 
         # Visual element of the goal
-        Goal(self.client, (self.goal,y))
+        # Goal(self.client, (self.goal,y))
 
-        self.burn_in("test")
+        self.burn_in()
 
         car_ob = self.ob_buffer[-self.n_step_delay-1]
 
@@ -185,6 +215,9 @@ class SimpleDrivingEnv(gym.Env):
         self.rendered_img.set_data(frame)
         plt.draw()
         plt.pause(.00001)
+
+    def set_goal(self,goal):
+        Goal(self.client, (self.goal,0))
 
     def close(self):
         p.disconnect(self.client)

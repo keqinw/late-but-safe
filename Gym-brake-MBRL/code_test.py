@@ -1,3 +1,4 @@
+from doctest import testfile
 import gym
 import torch
 import simple_driving
@@ -29,4 +30,3 @@ for i in range(num):
         ob = env.reset()
         time.sleep(1/30)
         break
-            

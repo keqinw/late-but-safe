@@ -1,0 +1,273 @@
+2022-04-21 10:16:50 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 10:16:50 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 10:16:50 run.py     INFO    : Warm up episode 0
+2022-04-21 10:16:51 run.py     INFO    : Warm up episode 99
+2022-04-21 10:16:52 run.py     INFO    : Warm up episode 199
+2022-04-21 10:16:54 run.py     INFO    : Warm up episode 299
+2022-04-21 10:16:55 run.py     INFO    : Warm up episode 399
+2022-04-21 10:16:57 run.py     INFO    : Warm up episode 499
+2022-04-21 10:16:58 run.py     INFO    : Warm up episode 599
+2022-04-21 10:16:59 run.py     INFO    : Warm up episode 699
+2022-04-21 10:17:01 run.py     INFO    : Warm up episode 799
+2022-04-21 10:17:02 run.py     INFO    : Warm up episode 899
+2022-04-21 10:17:03 run.py     INFO    : Warm up episode 999
+2022-04-21 10:17:03 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-21 10:17:04 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:17:04 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:17:04 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:17:04 run.py     INFO    : ### Q2.2.3: Test with CEM for 50 episodes
+2022-04-21 10:17:04 run.py     INFO    : Test episode 0
+2022-04-21 10:28:15 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 10:28:15 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 10:28:15 run.py     INFO    : Warm up episode 0
+2022-04-21 10:28:16 run.py     INFO    : Warm up episode 99
+2022-04-21 10:28:18 run.py     INFO    : Warm up episode 199
+2022-04-21 10:28:19 run.py     INFO    : Warm up episode 299
+2022-04-21 10:28:20 run.py     INFO    : Warm up episode 399
+2022-04-21 10:28:21 run.py     INFO    : Warm up episode 499
+2022-04-21 10:28:23 run.py     INFO    : Warm up episode 599
+2022-04-21 10:28:24 run.py     INFO    : Warm up episode 699
+2022-04-21 10:28:25 run.py     INFO    : Warm up episode 799
+2022-04-21 10:28:26 run.py     INFO    : Warm up episode 899
+2022-04-21 10:28:28 run.py     INFO    : Warm up episode 999
+2022-04-21 10:28:28 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-21 10:28:28 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:28:28 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:28:28 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:28:29 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 10:28:29 run.py     INFO    : Test episode 0
+2022-04-21 10:29:39 run.py     INFO    : Test episode 1
+2022-04-21 10:31:05 run.py     INFO    : Test episode 3
+2022-04-21 10:32:39 run.py     INFO    : Single + CEM: avg_reward: 31.573171791633644, avg_success: 1.0
+2022-04-21 10:37:30 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 10:37:31 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 10:37:31 run.py     INFO    : Warm up episode 0
+2022-04-21 10:37:32 run.py     INFO    : Warm up episode 99
+2022-04-21 10:37:33 run.py     INFO    : Warm up episode 199
+2022-04-21 10:37:34 run.py     INFO    : Warm up episode 299
+2022-04-21 10:37:36 run.py     INFO    : Warm up episode 399
+2022-04-21 10:37:37 run.py     INFO    : Warm up episode 499
+2022-04-21 10:37:38 run.py     INFO    : Warm up episode 599
+2022-04-21 10:37:39 run.py     INFO    : Warm up episode 699
+2022-04-21 10:37:40 run.py     INFO    : Warm up episode 799
+2022-04-21 10:37:42 run.py     INFO    : Warm up episode 899
+2022-04-21 10:37:43 run.py     INFO    : Warm up episode 999
+2022-04-21 10:37:43 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-21 10:37:44 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:37:44 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:37:44 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:37:44 run.py     INFO    : ### Q2.2.3: Test with CEM for 1 episodes
+2022-04-21 10:37:44 run.py     INFO    : Test episode 0
+2022-04-21 10:38:21 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 10:38:21 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 10:38:21 run.py     INFO    : Warm up episode 0
+2022-04-21 10:38:23 run.py     INFO    : Warm up episode 99
+2022-04-21 10:38:24 run.py     INFO    : Warm up episode 199
+2022-04-21 10:38:25 run.py     INFO    : Warm up episode 299
+2022-04-21 10:38:27 run.py     INFO    : Warm up episode 399
+2022-04-21 10:38:28 run.py     INFO    : Warm up episode 499
+2022-04-21 10:38:29 run.py     INFO    : Warm up episode 599
+2022-04-21 10:38:30 run.py     INFO    : Warm up episode 699
+2022-04-21 10:38:32 run.py     INFO    : Warm up episode 799
+2022-04-21 10:38:33 run.py     INFO    : Warm up episode 899
+2022-04-21 10:38:34 run.py     INFO    : Warm up episode 999
+2022-04-21 10:38:34 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-21 10:38:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:38:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:38:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 10:38:35 run.py     INFO    : ### Q2.2.3: Test with CEM for 1 episodes
+2022-04-21 10:38:35 run.py     INFO    : Test episode 0
+2022-04-21 11:09:17 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:09:17 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with w00 iterations
+2022-04-21 11:09:17 run.py     INFO    : Warm up episode 0
+2022-04-21 11:09:19 run.py     INFO    : Warm up episode 99
+2022-04-21 11:09:20 run.py     INFO    : Warm up episode 199
+2022-04-21 11:09:21 run.py     INFO    : Warm up episode 299
+2022-04-21 11:09:23 run.py     INFO    : Warm up episode 399
+2022-04-21 11:09:24 run.py     INFO    : Warm up episode 499
+2022-04-21 11:09:25 run.py     INFO    : Warm up episode 599
+2022-04-21 11:09:27 run.py     INFO    : Warm up episode 699
+2022-04-21 11:09:28 run.py     INFO    : Warm up episode 799
+2022-04-21 11:09:30 run.py     INFO    : Warm up episode 899
+2022-04-21 11:09:31 run.py     INFO    : Warm up episode 999
+2022-04-21 11:09:31 mpc.py     INFO    : Train dynamics model with CEM for 200 iterations
+2022-04-21 11:09:32 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:09:32 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:09:32 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:09:32 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 11:09:32 run.py     INFO    : Test episode 0
+2022-04-21 11:10:04 run.py     INFO    : If success: False
+2022-04-21 11:10:04 run.py     INFO    : Test episode 1
+2022-04-21 11:10:39 run.py     INFO    : If success: False
+2022-04-21 11:11:06 run.py     INFO    : Test episode 3
+2022-04-21 11:11:33 run.py     INFO    : If success: False
+2022-04-21 11:12:00 run.py     INFO    : Single + CEM: avg_reward: -15.282684764982799, avg_success: 0.0
+2022-04-21 11:20:16 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:20:16 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 11:20:16 run.py     INFO    : Warm up episode 0
+2022-04-21 11:20:17 run.py     INFO    : Warm up episode 99
+2022-04-21 11:20:18 run.py     INFO    : Warm up episode 199
+2022-04-21 11:20:20 run.py     INFO    : Warm up episode 299
+2022-04-21 11:20:21 run.py     INFO    : Warm up episode 399
+2022-04-21 11:20:22 run.py     INFO    : Warm up episode 499
+2022-04-21 11:20:23 run.py     INFO    : Warm up episode 599
+2022-04-21 11:20:25 run.py     INFO    : Warm up episode 699
+2022-04-21 11:20:26 run.py     INFO    : Warm up episode 799
+2022-04-21 11:20:27 run.py     INFO    : Warm up episode 899
+2022-04-21 11:20:29 run.py     INFO    : Warm up episode 999
+2022-04-21 11:20:29 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 11:20:30 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:20:30 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:20:30 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:20:30 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 11:20:30 run.py     INFO    : Test episode 0
+2022-04-21 11:21:31 run.py     INFO    : If success: True
+2022-04-21 11:21:31 run.py     INFO    : Test episode 1
+2022-04-21 11:22:37 run.py     INFO    : If success: False
+2022-04-21 11:24:05 run.py     INFO    : Test episode 3
+2022-04-21 11:24:47 run.py     INFO    : If success: False
+2022-04-21 11:25:28 run.py     INFO    : Single + CEM: avg_reward: 6.614065116111547, avg_success: 0.4
+2022-04-21 11:25:46 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:25:48 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 11:25:48 run.py     INFO    : Warm up episode 0
+2022-04-21 11:26:06 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:26:06 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 11:26:06 run.py     INFO    : Warm up episode 0
+2022-04-21 11:26:07 run.py     INFO    : Warm up episode 99
+2022-04-21 11:26:08 run.py     INFO    : Warm up episode 199
+2022-04-21 11:26:10 run.py     INFO    : Warm up episode 299
+2022-04-21 11:26:11 run.py     INFO    : Warm up episode 399
+2022-04-21 11:26:12 run.py     INFO    : Warm up episode 499
+2022-04-21 11:26:13 run.py     INFO    : Warm up episode 599
+2022-04-21 11:26:15 run.py     INFO    : Warm up episode 699
+2022-04-21 11:26:16 run.py     INFO    : Warm up episode 799
+2022-04-21 11:26:17 run.py     INFO    : Warm up episode 899
+2022-04-21 11:26:19 run.py     INFO    : Warm up episode 999
+2022-04-21 11:26:19 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 11:26:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:26:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:26:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:26:20 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 11:26:20 run.py     INFO    : Test episode 0
+2022-04-21 11:27:20 run.py     INFO    : If success: False
+2022-04-21 11:27:20 run.py     INFO    : Test episode 1
+2022-04-21 11:28:08 run.py     INFO    : If success: False
+2022-04-21 11:28:18 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:28:18 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 11:28:18 run.py     INFO    : Warm up episode 0
+2022-04-21 11:28:20 run.py     INFO    : Warm up episode 99
+2022-04-21 11:28:21 run.py     INFO    : Warm up episode 199
+2022-04-21 11:28:22 run.py     INFO    : Warm up episode 299
+2022-04-21 11:28:23 run.py     INFO    : Warm up episode 399
+2022-04-21 11:28:25 run.py     INFO    : Warm up episode 499
+2022-04-21 11:28:26 run.py     INFO    : Warm up episode 599
+2022-04-21 11:28:28 run.py     INFO    : Warm up episode 699
+2022-04-21 11:28:29 run.py     INFO    : Warm up episode 799
+2022-04-21 11:28:31 run.py     INFO    : Warm up episode 899
+2022-04-21 11:28:32 run.py     INFO    : Warm up episode 999
+2022-04-21 11:28:32 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 11:28:34 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:28:34 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:28:34 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:28:34 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 11:28:34 run.py     INFO    : Test episode 0
+2022-04-21 11:29:25 run.py     INFO    : If success: False
+2022-04-21 11:29:25 run.py     INFO    : Test episode 1
+2022-04-21 11:30:13 run.py     INFO    : If success: False
+2022-04-21 11:31:31 run.py     INFO    : Test episode 3
+2022-04-21 11:32:21 run.py     INFO    : If success: False
+2022-04-21 11:33:30 run.py     INFO    : Single + CEM: avg_reward: -15.617775444856903, avg_success: 0.0
+2022-04-21 11:33:36 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 11:33:36 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 11:33:36 run.py     INFO    : Warm up episode 0
+2022-04-21 11:33:38 run.py     INFO    : Warm up episode 99
+2022-04-21 11:33:39 run.py     INFO    : Warm up episode 199
+2022-04-21 11:33:40 run.py     INFO    : Warm up episode 299
+2022-04-21 11:33:41 run.py     INFO    : Warm up episode 399
+2022-04-21 11:33:42 run.py     INFO    : Warm up episode 499
+2022-04-21 11:33:43 run.py     INFO    : Warm up episode 599
+2022-04-21 11:33:45 run.py     INFO    : Warm up episode 699
+2022-04-21 11:33:46 run.py     INFO    : Warm up episode 799
+2022-04-21 11:33:47 run.py     INFO    : Warm up episode 899
+2022-04-21 11:33:48 run.py     INFO    : Warm up episode 999
+2022-04-21 11:33:48 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 11:33:49 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:33:49 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:33:49 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 11:33:49 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 11:33:49 run.py     INFO    : Test episode 0
+2022-04-21 11:35:41 run.py     INFO    : If success: True
+2022-04-21 11:35:41 run.py     INFO    : Test episode 1
+2022-04-21 11:36:38 run.py     INFO    : If success: False
+2022-04-21 11:38:33 run.py     INFO    : Test episode 3
+2022-04-21 11:40:14 run.py     INFO    : If success: False
+2022-04-21 11:42:35 run.py     INFO    : Single + CEM: avg_reward: 13.741071154894353, avg_success: 0.6
+2022-04-21 12:00:19 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 12:00:21 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 12:00:21 run.py     INFO    : Warm up episode 0
+2022-04-21 12:00:36 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 12:00:36 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 12:00:36 run.py     INFO    : Warm up episode 0
+2022-04-21 12:00:38 run.py     INFO    : Warm up episode 99
+2022-04-21 12:00:39 run.py     INFO    : Warm up episode 199
+2022-04-21 12:00:40 run.py     INFO    : Warm up episode 299
+2022-04-21 12:00:41 run.py     INFO    : Warm up episode 399
+2022-04-21 12:00:42 run.py     INFO    : Warm up episode 499
+2022-04-21 12:00:43 run.py     INFO    : Warm up episode 599
+2022-04-21 12:00:44 run.py     INFO    : Warm up episode 699
+2022-04-21 12:00:45 run.py     INFO    : Warm up episode 799
+2022-04-21 12:00:46 run.py     INFO    : Warm up episode 899
+2022-04-21 12:00:47 run.py     INFO    : Warm up episode 999
+2022-04-21 12:00:47 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 12:00:48 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:00:48 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:00:48 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:00:49 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 12:00:49 run.py     INFO    : Test episode 0
+2022-04-21 12:03:08 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 12:03:08 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 12:03:08 run.py     INFO    : Warm up episode 0
+2022-04-21 12:03:09 run.py     INFO    : Warm up episode 99
+2022-04-21 12:03:10 run.py     INFO    : Warm up episode 199
+2022-04-21 12:03:11 run.py     INFO    : Warm up episode 299
+2022-04-21 12:03:12 run.py     INFO    : Warm up episode 399
+2022-04-21 12:03:13 run.py     INFO    : Warm up episode 499
+2022-04-21 12:03:14 run.py     INFO    : Warm up episode 599
+2022-04-21 12:03:16 run.py     INFO    : Warm up episode 699
+2022-04-21 12:03:17 run.py     INFO    : Warm up episode 799
+2022-04-21 12:03:18 run.py     INFO    : Warm up episode 899
+2022-04-21 12:03:19 run.py     INFO    : Warm up episode 999
+2022-04-21 12:03:19 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 12:03:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:03:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:03:20 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:03:20 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 12:03:20 run.py     INFO    : Test episode 0
+2022-04-21 12:04:37 run.py     INFO    : If success: False
+2022-04-21 12:04:37 run.py     INFO    : Test episode 1
+2022-04-21 12:06:41 run.py     INFO    : If success: False
+2022-04-21 12:07:23 run.py     INFO    : ### Q2.2.1: Train a single dynamics model f(s, a, phi) using a random policy
+2022-04-21 12:07:23 run.py     INFO    : ### Q2.2.1: Train from 1000 randomly sampled episodes with 100 iterations
+2022-04-21 12:07:23 run.py     INFO    : Warm up episode 0
+2022-04-21 12:07:24 run.py     INFO    : Warm up episode 99
+2022-04-21 12:07:25 run.py     INFO    : Warm up episode 199
+2022-04-21 12:07:26 run.py     INFO    : Warm up episode 299
+2022-04-21 12:07:28 run.py     INFO    : Warm up episode 399
+2022-04-21 12:07:29 run.py     INFO    : Warm up episode 499
+2022-04-21 12:07:30 run.py     INFO    : Warm up episode 599
+2022-04-21 12:07:31 run.py     INFO    : Warm up episode 699
+2022-04-21 12:07:32 run.py     INFO    : Warm up episode 799
+2022-04-21 12:07:33 run.py     INFO    : Warm up episode 899
+2022-04-21 12:07:34 run.py     INFO    : Warm up episode 999
+2022-04-21 12:07:34 mpc.py     INFO    : Train dynamics model with CEM for 300 iterations
+2022-04-21 12:07:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:07:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:07:35 font_manager.py WARNING : findfont: Font family ['normal'] not found. Falling back to DejaVu Sans.
+2022-04-21 12:07:35 run.py     INFO    : ### Q2.2.3: Test with CEM for 5 episodes
+2022-04-21 12:07:35 run.py     INFO    : Test episode 0
+2022-04-21 12:09:35 run.py     INFO    : If success: True
+2022-04-21 12:09:35 run.py     INFO    : Test episode 1
+2022-04-21 12:10:35 run.py     INFO    : If success: False
+2022-04-21 12:12:50 run.py     INFO    : Test episode 3
+2022-04-21 12:14:42 run.py     INFO    : If success: True
+2022-04-21 12:15:31 run.py     INFO    : Single + CEM: avg_reward: 14.427941533971978, avg_success: 0.6

@@ -66,16 +66,6 @@ class ExperimentGTDynamics(object):
             print(samples[-1]["rewards"][-1]== 50)
         avg_return = np.mean([sample["reward_sum"] for sample in samples])
         avg_success = np.mean([sample["rewards"][-1] == 50 for sample in samples])
-        # 这里的判断成功也是不对的，需要修改
-
-        # 成功率比较低，我觉得原因可能是以下几点：
-        # - cost function 需要修改（逻辑上是对的，把做完action的下一个state的cost作为这个action的cost）
-        # - timestep是不是太高了，导致做决策的次数太多，导致失败。
-        # - 是不是环境太复杂了，我先简化一下任务，确认这个timestep和这个cost function是可以的
-        # - 简化任务的方式有：把油门恒定；扩大tol；。。。
-        # - 以我的直觉看，我觉得CEM是足够解决这个问题的，一定是哪里错了
-        
-        # - 结果更新，我自己写了一个CEM + no MPC，发现成功率可以达到0.3以上，所以这个绝对没有问题的
         return avg_return, avg_success
 
 
@@ -105,15 +95,15 @@ class ExperimentModelDynamics:
             traj = samples[-1]["obs"]
             
             # # plot the result
-            plt.clf()
-            x = [i for i in range(traj.shape[0])]
-            plt.plot(x,traj[:,0],"*")
-            plt.fill_between(x, traj[:,-1]-0.3, traj[:,-1]+0.3, color='b', alpha=.1)
-            plt.show()
+            # plt.clf()
+            # x = [i for i in range(traj.shape[0])]
+            # plt.plot(x,traj[:,0],"*")
+            # plt.fill_between(x, traj[:,-1]-0.3, traj[:,-1]+0.3, color='b', alpha=.1)
+            # plt.show()
 
         avg_return = np.mean([sample["reward_sum"] for sample in samples])
         avg_success = np.mean([sample["rewards"][-1] == 50 for sample in samples])
-        return avg_return, avg_success
+        return avg_return, avg_success, samples
 
     def model_warmup(self, num_episodes, num_train_itrs):
         """ 
@@ -254,7 +244,8 @@ def train_single_dynamics(num_test_episode=50, device=None):
     # log.info("Single + Random: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
 
     log.info("### Q2.2.3: Test with CEM for %d episodes" % num_test_episode)
-    avg_reward, avg_success = exp.test(num_test_episode, optimizer="cem")
+    avg_reward, avg_success, samples = exp.test(num_test_episode, optimizer="cem")
+    np.save('./Gym-brake-MBRL/actions',samples)
     log.info("Single + CEM: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
 
 

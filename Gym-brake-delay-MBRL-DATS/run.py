@@ -22,7 +22,7 @@ INFO = 2
 
 # Training params
 TASK_HORIZON = 100
-PLAN_HORIZON = 10
+PLAN_HORIZON = 15
 
 # CEM params
 POPSIZE = 200
@@ -107,7 +107,7 @@ class ExperimentModelDynamics:
 
         avg_return = np.mean([sample["reward_sum"] for sample in samples])
         avg_success = np.mean([sample["rewards"][-1] == 50 for sample in samples])
-        return avg_return, avg_success
+        return avg_return, avg_success, samples
 
     def model_warmup(self, num_episodes, num_train_itrs):
         """ 
@@ -216,10 +216,11 @@ def train_single_dynamics(num_test_episode=50, device=None):
     # log.info("Single + Random: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
 
     log.info("### Q2.2.3: Test with CEM for %d episodes" % num_test_episode)
-    avg_reward, avg_success = exp.test(num_test_episode, optimizer="cem")
+    avg_reward, avg_success, samples = exp.test(num_test_episode, optimizer="cem")
+    np.save('./Gym-brake-delay-MBRL-DATS/actions',samples)
     log.info("Single + CEM: avg_reward: {}, avg_success: {}".format(avg_reward, avg_success))
 
 if __name__ == "__main__":
     gpu_number = 0
     device = torch.device('cuda:%d' % gpu_number if torch.cuda.is_available() else 'cpu')
-    train_single_dynamics(10, device=device)   # Q2.2
+    train_single_dynamics(5, device=device)   # Q2.2

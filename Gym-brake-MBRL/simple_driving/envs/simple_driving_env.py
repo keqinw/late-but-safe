@@ -101,7 +101,7 @@ class SimpleDrivingEnv(gym.Env):
         self.car = Car(self.client)
 
         # Visual element of the goal
-        Goal(self.client, (self.goal,y))
+        # Goal(self.client, (self.goal,y))
 
         # pre-accelerate
         # for i in range(20):
@@ -141,6 +141,9 @@ class SimpleDrivingEnv(gym.Env):
         self.rendered_img.set_data(frame)
         plt.draw()
         plt.pause(.00001)
+
+    def set_goal(self,goal):
+        Goal(self.client, (goal,0))
 
     def close(self):
         p.disconnect(self.client)
