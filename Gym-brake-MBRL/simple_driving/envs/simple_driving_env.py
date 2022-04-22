@@ -25,8 +25,8 @@ class SimpleDrivingEnv(gym.Env):
             high=np.array([10, 10, 10], dtype=np.float32))
         self.np_random, _ = gym.utils.seeding.np_random()
 
-        self.client = p.connect(p.DIRECT)
-        # self.client = p.connect(p.GUI)
+        # self.client = p.connect(p.DIRECT)
+        self.client = p.connect(p.GUI)
         p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
 
         # Reduce length of episodes for RL algorithms

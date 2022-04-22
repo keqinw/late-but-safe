@@ -40,7 +40,7 @@ class SimpleDrivingEnv(gym.Env):
         self.render_rot_matrix = None
         self.n_step_delay = 5
         self.previous_action = None
-        self.reset()
+        # self.reset_visual()
 
     def burn_in(self):
         # initial the observation buffer
@@ -135,7 +135,7 @@ class SimpleDrivingEnv(gym.Env):
         self.car.apply_action(action)
         p.stepSimulation()
 
-    def reset_visual(self):
+    def reset_visual(self,goal):
         p.resetSimulation(self.client)
         p.setGravity(0, 0, -10)
         # Reload the plane
@@ -158,7 +158,7 @@ class SimpleDrivingEnv(gym.Env):
         self.car = Car(self.client)
 
         # Visual element of the goal
-        Goal(self.client, (self.goal,y))
+        Goal(self.client, (goal,y))
     
     def reset_test(self):
         p.resetSimulation(self.client)
